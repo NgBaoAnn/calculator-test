@@ -2,7 +2,7 @@
 name: Bug Report
 about: Báo cáo lỗi phần mềm được phát hiện trong quá trình kiểm thử
 title: "[BUG][<Module>] <Mô tả ngắn gọn về lỗi>"
-labels: ["bug", "qa"]
+labels: ["type: bug", "status: new"]
 assignees: ""
 ---
 
@@ -24,33 +24,36 @@ assignees: ""
 
 <Mô tả ngắn gọn lỗi gì xảy ra và chức năng nào bị ảnh hưởng.>
 
-## Môi trường kiểm thử
+## Môi trường
 
 - URL: `<URL>`
 - Browser / version: `<Chrome 123, Firefox...>`
 - OS / device: `<Windows 11, macOS...>`
+- Tài khoản test (nếu có): `<tài khoản hoặc vai trò>`
 - Tần suất: `<Luôn xảy ra / X trên Y lần>`
 
 ---
 
-## Các bước tái hiện
+## Steps to reproduce
 
 1. Truy cập vào trang `...`
 2. Nhập dữ liệu `...` vào trường `...`
 3. Nhấn vào nút `...`
 4. Quan sát kết quả hiển thị trên màn hình.
 
----
-
-## Kết quả mong đợi
-
-<Hành vi đúng theo requirement hoặc test case.>
+Ghi rõ dữ liệu đầu vào và trạng thái ban đầu cần thiết để tái hiện.
 
 ---
 
-## Kết quả thực tế
+## Actual result
 
 <Hành vi thực tế, thông báo lỗi, giá trị hoặc trạng thái giao diện sai.>
+
+---
+
+## Expected result
+
+<Hành vi đúng theo requirement, test case hoặc Prototype.>
 
 ---
 

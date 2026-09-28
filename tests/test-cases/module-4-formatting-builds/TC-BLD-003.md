@@ -1,4 +1,4 @@
-# TC-BLD-003: Build 3 không kiểm tra kiểu số khi Concatenate
+# TC-BLD-003: Kiểm tra Concatenate không yêu cầu dữ liệu số
 
 ## Requirement ID
 FR-CALC-04
@@ -7,21 +7,23 @@ FR-CALC-04
 Module 4 - Builds / Regression / Equivalence Partitioning
 
 ## Preconditions
-- Mở trang; chạy độc lập trên Prototype và Build 3, tải lại trang trước mỗi lượt.
+- Người dùng đã mở trang: https://testsheepnz.github.io/BasicCalculator.html
+- Chạy riêng test case trên từng Build từ 1 đến 9; tải lại trang trước mỗi lượt.
 
 ## Test data
+Build áp dụng: Build 1–9; chạy riêng từng Build.
+
 | First number | Second number | Operation | Answer chuẩn |
 | --- | --- | --- | --- |
 | abc | xyz | Concatenate | abcxyz |
 
 ## Test steps
-1. Chọn build, nhập dữ liệu, chọn Concatenate và nhấn Calculate.
-2. Chờ Answer hiện; kiểm tra Answer, thông báo lỗi và trạng thái Integers only.
-3. Lặp lại với build còn lại.
+1. Chọn Build đang kiểm thử, nhập dữ liệu, chọn Concatenate và nhấn Calculate.
+2. Quan sát Answer, thông báo lỗi và trạng thái Integers only.
 
 ## Expected result
-- Answer là `abcxyz`, không có lỗi kiểu số; Integers only ẩn và bị vô hiệu hóa.
-- Ghi nhận lỗi nếu Build 3 báo `is not a number`.
+- Answer là abcxyz; không có lỗi kiểu số; Integers only ẩn và không thể tương tác.
+- Ghi nhận Fail nếu phép Concatenate báo lỗi "is not a number".
 
 ## Status / Related bugs
 Not Run / None

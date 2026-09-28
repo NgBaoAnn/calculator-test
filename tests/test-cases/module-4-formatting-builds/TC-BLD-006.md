@@ -1,4 +1,4 @@
-# TC-BLD-006: Build 6 chặn phép chia cho 0
+# TC-BLD-006: Kiểm tra chặn phép chia cho 0
 
 ## Requirement ID
 FR-CALC-04
@@ -7,21 +7,23 @@ FR-CALC-04
 Module 4 - Builds / Regression / Error Guessing
 
 ## Preconditions
-- Mở trang; chạy độc lập trên Prototype và Build 6, tải lại trang trước mỗi lượt.
+- Người dùng đã mở trang: https://testsheepnz.github.io/BasicCalculator.html
+- Chạy riêng test case trên từng Build từ 1 đến 9; tải lại trang trước mỗi lượt.
 
 ## Test data
+Build áp dụng: Build 1–9; chạy riêng từng Build.
+
 | First number | Second number | Operation |
 | --- | --- | --- |
 | 5 | 0 | Divide |
 
 ## Test steps
-1. Chọn build, nhập dữ liệu, chọn Divide và nhấn Calculate.
-2. Quan sát thông báo lỗi và Answer; lặp lại trên build còn lại.
+1. Chọn Build đang kiểm thử, nhập dữ liệu, chọn Divide và nhấn Calculate.
+2. Quan sát thông báo lỗi và Answer.
 
 ## Expected result
-- Hiển thị `Divide by zero error!` và không đưa `Infinity` hoặc `NaN` vào Answer.
-- Ghi nhận lỗi nếu Build 6 trả về một giá trị số không hợp lệ.
-- Trạng thái chờ của Prototype khi gặp lỗi được kiểm riêng ở `TC-FMT-006`.
+- Hiển thị "Divide by zero error!" và không đưa Infinity hoặc NaN vào Answer.
+- Ghi nhận Fail nếu phép chia cho 0 tạo kết quả số không hợp lệ.
 
 ## Status / Related bugs
 Not Run / None

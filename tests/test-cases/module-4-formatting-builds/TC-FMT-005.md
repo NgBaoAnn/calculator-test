@@ -7,17 +7,21 @@ FR-CALC-04
 Module 4 - Formatting & Controls / UI & Event / State Transition
 
 ## Preconditions
-- Mở trang, chọn Prototype và nhấn Clear.
+- Người dùng đã mở trang: https://testsheepnz.github.io/BasicCalculator.html
+- Chạy riêng test case trên từng Build từ 1 đến 9; tải lại trang trước mỗi lượt.
 
 ## Test data
+Build áp dụng: Build 1–9; chạy riêng từng Build.
+
 | First number | Second number | Operation |
 | --- | --- | --- |
 | abc | 10 | Add |
 
 ## Test steps
-1. Nhập dữ liệu và nhấn Calculate.
-2. Xác nhận thông báo `Number 1 is not a number` xuất hiện.
-3. Nhấn Clear rồi quan sát thông báo, Answer và hai ô nhập.
+1. Chọn Build đang kiểm thử theo mục Test data.
+2. Nhập dữ liệu và nhấn Calculate.
+3. Xác nhận thông báo `Number 1 is not a number` xuất hiện.
+4. Nhấn Clear rồi quan sát thông báo, Answer và hai ô nhập.
 
 ## Expected result
 - Thông báo lỗi và Answer đều rỗng sau Clear.

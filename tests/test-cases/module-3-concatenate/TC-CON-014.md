@@ -7,18 +7,19 @@ FR-CALC-03
 Module 3 - Concatenate & Validation / UI & State / State Transition Testing
 
 ## Preconditions
-- Người dùng đã truy cập trang: https://testsheepnz.github.io/BasicCalculator.html
-- Chọn Build: Prototype
+- Người dùng đã mở trang: https://testsheepnz.github.io/BasicCalculator.html
+- Chạy riêng test case trên từng Build từ 1 đến 9; tải lại trang trước mỗi lượt.
 - Phép toán đang chọn mặc định là Add (hoặc một phép toán số học bất kỳ)
 
 ## Test data
-| Build | Prototype |
+Build áp dụng: Build 1–9; chạy riêng từng Build.
+
 | Operation ban đầu | Add |
 | Operation chuyển đổi | Concatenate |
 
 ## Test steps
 1. Truy cập trang web Basic Calculator
-2. Chọn Build "Prototype"
+2. Chọn Build đang kiểm thử
 3. Quan sát giao diện: Checkbox integerSelect và nhãn intSelectionLabel ("Integers only") đang hiển thị bình thường
 4. Tích chọn vào checkbox "Integers only"
 5. Tại dropdown selectOperationDropdown, đổi lựa chọn sang "Concatenate"

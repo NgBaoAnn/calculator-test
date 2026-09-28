@@ -7,10 +7,12 @@ FR-CALC-02
 Module 2 - Division / Functional / Equivalence Partitioning
 
 ## Preconditions
-- Người dùng đã truy cập trang: https://testsheepnz.github.io/BasicCalculator.html
-- Chọn Build: Prototype
+- Người dùng đã mở trang: https://testsheepnz.github.io/BasicCalculator.html
+- Chạy riêng test case trên từng Build từ 1 đến 9; tải lại trang trước mỗi lượt.
 
 ## Test data
+Build áp dụng: Build 1–9; chạy riêng từng Build.
+
 | Lần chạy | First number | Second number | Expected Answer |
 | :---: | ---: | ---: | ---: |
 | 1 | -12 | 3 | -4 |
@@ -20,7 +22,7 @@ Module 2 - Division / Functional / Equivalence Partitioning
 Operation cho cả ba lần chạy: `Divide`.
 
 ## Test steps
-1. Chọn Build "Prototype" và Operation "Divide".
+1. Chọn Build đang kiểm thử và Operation "Divide".
 2. Lần lượt nhập từng cặp dữ liệu trong bảng và bấm "Calculate".
 3. Đối chiếu Answer với cột Expected Answer sau mỗi lần chạy.
 

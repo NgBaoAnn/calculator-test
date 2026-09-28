@@ -7,17 +7,19 @@ FR-CALC-02
 Module 2 - Division / State Transition / State Transition Testing
 
 ## Preconditions
-- Người dùng đã truy cập trang: https://testsheepnz.github.io/BasicCalculator.html
-- Chọn Build: Prototype
+- Người dùng đã mở trang: https://testsheepnz.github.io/BasicCalculator.html
+- Chạy riêng test case trên từng Build từ 1 đến 9; tải lại trang trước mỗi lượt.
 
 ## Test data
+Build áp dụng: Build 1–9; chạy riêng từng Build.
+
 | Giai đoạn | First number | Second number | Operation |
 | :--- | ---: | ---: | :--- |
 | Tạo lỗi | 50 | 0 | Divide |
 | Phục hồi | 50 | 5 | Divide |
 
 ## Test steps
-1. Chọn Build "Prototype", nhập dữ liệu ở giai đoạn "Tạo lỗi" và bấm "Calculate".
+1. Chọn Build đang kiểm thử, nhập dữ liệu ở giai đoạn "Tạo lỗi" và bấm "Calculate".
 2. Xác nhận errorMsgField hiển thị "Divide by zero error!".
 3. Thay Second number bằng "5" và bấm "Calculate" lần nữa.
 

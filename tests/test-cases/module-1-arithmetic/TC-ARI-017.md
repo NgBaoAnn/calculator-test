@@ -7,18 +7,19 @@ FR-CALC-01
 Module 1 - Arithmetic / Boundary Value / Boundary Value Analysis (BVA)
 
 ## Preconditions
-- Người dùng đã truy cập trang: https://testsheepnz.github.io/BasicCalculator.html
-- Chọn Build: Prototype
+- Người dùng đã mở trang: https://testsheepnz.github.io/BasicCalculator.html
+- Chạy riêng test case trên từng Build từ 1 đến 9; tải lại trang trước mỗi lượt.
 
 ## Test data
-| Build | Prototype |
+Build áp dụng: Build 1–9; chạy riêng từng Build.
+
 | First number | -999999999 |
 | Second number | 1 |
 | Operation | Add |
 
 ## Test steps
 1. Truy cập trang web Basic Calculator
-2. Chọn Build "Prototype" từ dropdown
+2. Chọn Build đang kiểm thử từ dropdown
 3. Nhập số nguyên âm có đúng 10 ký tự gồm dấu trừ "-999999999" vào ô First number
 4. Thử gõ thêm một chữ số nữa vào ô First number để kiểm tra giới hạn 10 ký tự
 5. Nhập "1" vào ô Second number

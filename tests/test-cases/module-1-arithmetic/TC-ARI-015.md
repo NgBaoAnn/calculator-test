@@ -7,18 +7,19 @@ FR-CALC-01
 Module 1 - Arithmetic / Functional / Equivalence Partitioning
 
 ## Preconditions
-- Người dùng đã truy cập trang: https://testsheepnz.github.io/BasicCalculator.html
-- Chọn Build: Prototype
+- Người dùng đã mở trang: https://testsheepnz.github.io/BasicCalculator.html
+- Chạy riêng test case trên từng Build từ 1 đến 9; tải lại trang trước mỗi lượt.
 
 ## Test data
-| Build | Prototype |
+Build áp dụng: Build 1–9; chạy riêng từng Build.
+
 | First number | 6 |
 | Second number | -5 |
 | Operation | Multiply |
 
 ## Test steps
 1. Truy cập trang web Basic Calculator
-2. Chọn Build "Prototype" từ dropdown
+2. Chọn Build đang kiểm thử từ dropdown
 3. Nhập "6" vào trường First number
 4. Nhập "-5" vào trường Second number
 5. Chọn Operation là "Multiply"

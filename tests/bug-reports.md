@@ -4,7 +4,7 @@
 
 - Lượt chạy: [Playwright Build 1–9 ngày 28/09/2026](automated/2026-09-28T12-26-44-978Z/summary.md), bắt đầu lúc `2026-09-28T12:26:44.978Z` (`19:26:44` giờ Việt Nam).
 - Tổng cộng 621 cặp Test Case × Build: **358 Pass, 195 Fail, 68 Blocked**. Có 69 testcase trên mỗi Build 1–9; không đưa Prototype vào phạm vi báo cáo này.
-- Đây là **bản bug report chính của repository**: 11 báo cáo gom 195 Fail theo nhóm lỗi chính. Các mã `BUG-SRC-*` là định danh nội bộ có từ bước khảo sát mã nguồn; chưa phải GitHub Issue ID. Cùng một lỗi có thể ảnh hưởng nhiều testcase. 68 Blocked trên Build 9 là trạng thái test script skip, không phải 68 lỗi đã được xác nhận riêng.
+- Đây là **bản bug report chính của repository**: 11 báo cáo gom 195 Fail theo nhóm lỗi chính. Các mã `BUG-SRC-*` là định danh nội bộ từ bước khảo sát mã nguồn và đã được đồng bộ chính thức lên GitHub Issues (#1–#11). Cùng một lỗi có thể ảnh hưởng nhiều testcase. 68 Blocked trên Build 9 là trạng thái test script skip, không phải 68 lỗi đã được xác nhận riêng.
 - Bằng chứng lưu trong JSON theo từng build và Test Case ID. Runner không giữ screenshot/video/trace; các mô tả nguyên nhân từ `source-findings.md` được ghi là giả thuyết khi JSON chưa chứng minh.
 - Môi trường lần chạy: Basic Calculator tại `https://testsheepnz.github.io/BasicCalculator.html`; Playwright 1.63.0, Chromium headless (Chrome for Testing 153.0.8010.12), Ubuntu 26.04.1 LTS x86_64. Mã commit của website không có trong báo cáo. Tần suất mới được quan sát qua một lượt chạy tự động trên mỗi build.
 
@@ -30,7 +30,7 @@
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-01` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-01` — [Issue #1](https://github.com/NgBaoAnn/calculator-test/issues/1) |
 | Found by Test Case | TC-BLD-001; TC-CON-002, TC-CON-010–013, TC-CON-016, TC-CON-022, TC-FMT-005 |
 | Requirement liên quan | FR-CALC-03, FR-CALC-04 |
 | Module / chức năng | M3/M4 — validation phép toán số |
@@ -88,7 +88,7 @@ Phát hiện từ mã nguồn gợi ý nhánh kiểm tra số bị bỏ qua; JSO
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-02` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-02` — [Issue #2](https://github.com/NgBaoAnn/calculator-test/issues/2) |
 | Found by Test Case | TC-BLD-002; TC-ARI-001; TC-CON-001 |
 | Requirement liên quan | FR-CALC-01, FR-CALC-03, FR-CALC-04 |
 | Module / chức năng | M1/M3/M4 — Add, Concatenate |
@@ -146,7 +146,7 @@ Add trả `46`; Concatenate trả `1234`.
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-03` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-03` — [Issue #3](https://github.com/NgBaoAnn/calculator-test/issues/3) |
 | Found by Test Case | TC-BLD-003; TC-CON-003–006, TC-CON-008–009, TC-CON-014, TC-CON-018, TC-FMT-007 |
 | Requirement liên quan | FR-CALC-03, FR-CALC-04 |
 | Module / chức năng | M3/M4 — Concatenate và Integers only |
@@ -204,7 +204,7 @@ Mã nguồn gợi ý Build 3 áp dụng quy tắc số cho Concatenate. JSON lư
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-04` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-04` — [Issue #4](https://github.com/NgBaoAnn/calculator-test/issues/4) |
 | Found by Test Case | TC-BLD-004; TC-DIV-003, TC-CON-014–015, TC-FMT-003, TC-FMT-007 |
 | Requirement liên quan | FR-CALC-02, FR-CALC-04 |
 | Module / chức năng | M2/M3/M4 — định dạng kết quả |
@@ -262,7 +262,7 @@ Hai testcase cung cấp bằng chứng riêng cho trạng thái checkbox và k�
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-05` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-05` — [Issue #5](https://github.com/NgBaoAnn/calculator-test/issues/5) |
 | Found by Test Case | TC-BLD-005 |
 | Requirement liên quan | FR-CALC-04 |
 | Module / chức năng | M4 — Clear |
@@ -319,7 +319,7 @@ Báo cáo này chỉ khẳng định lỗi trước Calculate; không suy rộng
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-06` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-06` — [Issue #6](https://github.com/NgBaoAnn/calculator-test/issues/6) |
 | Found by Test Case | TC-BLD-006; TC-DIV-002, TC-DIV-008–009, TC-DIV-011, TC-FMT-006 |
 | Requirement liên quan | FR-CALC-02, FR-CALC-04 |
 | Module / chức năng | M2/M4 — Divide |
@@ -377,7 +377,7 @@ Mã nguồn gợi ý có thể sinh `Infinity`/`NaN`; JSON của các ca này ch
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-07` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-07` — [Issue #7](https://github.com/NgBaoAnn/calculator-test/issues/7) |
 | Found by Test Case | TC-BLD-007; TC-ARI-001; nhiều ca số học, chia và ghép chuỗi trong Build 7 |
 | Requirement liên quan | FR-CALC-01, FR-CALC-02, FR-CALC-03, FR-CALC-04 |
 | Module / chức năng | M1/M2/M3/M4 — toán hạng thứ nhất |
@@ -435,7 +435,7 @@ Mã nguồn gợi ý dùng Answer cũ làm toán hạng thứ nhất; lần ch�
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-08` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-08` — [Issue #8](https://github.com/NgBaoAnn/calculator-test/issues/8) |
 | Found by Test Case | TC-BLD-008; TC-ARI-007; TC-DIV-003; nhiều ca khác trong Build 8 |
 | Requirement liên quan | FR-CALC-01, FR-CALC-02, FR-CALC-03, FR-CALC-04 |
 | Module / chức năng | M1/M2/M3/M4 — thứ tự toán hạng |
@@ -493,7 +493,7 @@ Kết quả của trừ và chia cùng hỗ trợ nhận định đảo toán h�
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-09` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-09` — [Issue #9](https://github.com/NgBaoAnn/calculator-test/issues/9) |
 | Found by Test Case | TC-BLD-009 |
 | Requirement liên quan | FR-CALC-04 |
 | Module / chức năng | M4 — giao diện nhập liệu |
@@ -550,7 +550,7 @@ JSON chỉ chứng minh Second number bị ẩn; trạng thái Calculate và 68 
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-10` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-10` — [Issue #10](https://github.com/NgBaoAnn/calculator-test/issues/10) |
 | Found by Test Case | TC-CON-019, TC-CON-020, TC-CON-021 trên Build 1–8 |
 | Requirement liên quan | FR-CALC-03 |
 | Module / chức năng | M3 — validation đầu vào |
@@ -609,7 +609,7 @@ Mã nguồn gợi ý `isNaN("")` và `isNaN("   ")` cho phép ép thành 0. Kế
 
 | Trường | Nội dung |
 | :--- | :--- |
-| Bug ID | `BUG-SRC-11` — mã nội bộ, chưa có GitHub Issue ID |
+| Bug ID | `BUG-SRC-11` — [Issue #11](https://github.com/NgBaoAnn/calculator-test/issues/11) |
 | Found by Test Case | TC-DIV-009, TC-FMT-006 trên Build 1–5 và 7 |
 | Requirement liên quan | FR-CALC-02, FR-CALC-04 |
 | Module / chức năng | M2/M4 — trạng thái Calculate |

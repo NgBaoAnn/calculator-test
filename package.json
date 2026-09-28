@@ -4,9 +4,9 @@
   "description": "Playwright automated test suite for Basic Calculator (Builds 1-9)",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
-    "test:pair": "ts-node test-scripts/runners/build-pair-runner.ts",
-    "test:all-pairs": "ts-node test-scripts/runners/build-pair-runner.ts --all-pairs",
+    "test": "playwright test --config=tests/test-scripts/playwright.config.ts",
+    "test:pair": "ts-node tests/test-scripts/runners/build-pair-runner.ts",
+    "test:all-pairs": "ts-node tests/test-scripts/runners/build-pair-runner.ts --all-pairs",
     "test:report": "playwright show-report"
   },
   "keywords": [

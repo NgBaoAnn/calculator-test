@@ -4,10 +4,10 @@ Hệ thống kiểm thử tự động toàn diện cho ứng dụng [Basic Calc
 
 ---
 
-## 📂 CẤU TRÚC THƯ MỤC `test-scripts/`
+## 📂 CẤU TRÚC THƯ MỤC `tests/test-scripts/`
 
 ```text
-test-scripts/
+tests/test-scripts/
 ├── pages/
 │   └── calculator.page.ts          # Page Object Model đóng gói tương tác DOM
 ├── fixtures/
@@ -57,8 +57,8 @@ npm run test:all-pairs
 
 ### 3. Chạy test thủ công theo từng module
 ```bash
-TARGET_BUILD=0 npx playwright test test-scripts/specs/module-1-arithmetic.spec.ts
-TARGET_BUILD=1 npx playwright test test-scripts/specs/module-4-formatting.spec.ts
+TARGET_BUILD=0 npx playwright test tests/test-scripts/specs/module-1-arithmetic.spec.ts --config=tests/test-scripts/playwright.config.ts
+TARGET_BUILD=1 npx playwright test tests/test-scripts/specs/module-4-formatting.spec.ts --config=tests/test-scripts/playwright.config.ts
 ```
 
 ### 4. Xem báo cáo HTML Playwright Report

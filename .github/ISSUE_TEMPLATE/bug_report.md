@@ -1,28 +1,40 @@
 ---
-name: 🐛 Bug Report
+name: Bug Report
 about: Báo cáo lỗi phần mềm được phát hiện trong quá trình kiểm thử
-title: "[BUG] <Mô tả ngắn gọn về lỗi>"
+title: "[BUG][<Module>] <Mô tả ngắn gọn về lỗi>"
 labels: ["bug", "qa"]
 assignees: ""
 ---
 
-## 📌 THÔNG TIN LỖI (DEFECT INFORMATION)
-- **Mã Bug ID**: `BUG-XXX`
-- **Mã Test Case liên quan**: `TC-XXX-XXX`
-- **Module / Chức năng bị ảnh hưởng**: [ví dụ: Login / Checkout / Arithmetic]
-- **Môi trường (Environment)**: [ví dụ: Staging / Prototype / Build 1]
-- **Trình duyệt / Thiết bị (Browser / OS)**: [ví dụ: Chrome 122 trên macOS]
-- **Mức độ nghiêm trọng (Severity)**: [Trivial / Minor / Major / Critical / Blocker]
-- **Mức độ ưu tiên (Priority)**: [Low / Medium / High / Urgent]
+## Thông tin lỗi
+
+| Trường | Nội dung |
+| :--- | :--- |
+| Bug ID | `BUG-XXX` *(GitHub sẽ tự cấp số Issue)* |
+| Found by Test Case | `TC-XXX-XXX` |
+| Requirement liên quan | `FR-XXX-XX` |
+| Module / chức năng | `<Module và chức năng bị ảnh hưởng>` |
+| Build / commit | `<Prototype, Build 1...9> / <commit SHA>` |
+| Severity | `<Trivial / Minor / Major / Critical / Blocker>` |
+| Priority | `<P3 / P2 / P1 / P0>` |
 
 ---
 
-## 📝 MÔ TẢ LỖI (DESCRIPTION)
-Mô tả rõ ràng và ngắn gọn về lỗi xảy ra.
+## Mô tả lỗi
+
+<Mô tả ngắn gọn lỗi gì xảy ra và chức năng nào bị ảnh hưởng.>
+
+## Môi trường kiểm thử
+
+- URL: `<URL>`
+- Browser / version: `<Chrome 123, Firefox...>`
+- OS / device: `<Windows 11, macOS...>`
+- Tần suất: `<Luôn xảy ra / X trên Y lần>`
 
 ---
 
-## 👣 CÁC BƯỚC TÁI HIỆN LỖI (STEPS TO REPRODUCE)
+## Các bước tái hiện
+
 1. Truy cập vào trang `...`
 2. Nhập dữ liệu `...` vào trường `...`
 3. Nhấn vào nút `...`
@@ -30,15 +42,28 @@ Mô tả rõ ràng và ngắn gọn về lỗi xảy ra.
 
 ---
 
-## 🎯 KẾT QUẢ MONG ĐỢI (EXPECTED BEHAVIOR)
-Hệ thống phải hoạt động như thế nào theo tài liệu đặc tả / test case.
+## Kết quả mong đợi
+
+<Hành vi đúng theo requirement hoặc test case.>
 
 ---
 
-## 💥 KẾT QUẢ THỰC TẾ (ACTUAL BEHAVIOR)
-Hệ thống thực tế phản hồi như thế nào (kèm thông báo lỗi hoặc hành vi sai lệch).
+## Kết quả thực tế
+
+<Hành vi thực tế, thông báo lỗi, giá trị hoặc trạng thái giao diện sai.>
 
 ---
 
-## 📸 HÌNH ẢNH / LOG MINH CHỨNG (SCREENSHOTS & LOGS)
-*Chèn ảnh chụp màn hình, ảnh GIF hoặc log console/network tại đây nếu có.*
+## Evidence
+
+<Kéo thả screenshot/video hoặc dán console/network log tại đây.>
+
+## Tiêu chí xác nhận lỗi
+
+- [ ] Đã chạy lại test case trên đúng Build / commit.
+- [ ] Đã đối chiếu với requirement hoặc expected result.
+- [ ] Đã đính kèm evidence hoặc ghi rõ lý do không có.
+
+## Ghi chú xử lý
+
+<Để trống nếu chưa có phân tích nguyên nhân hoặc workaround.>

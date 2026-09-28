@@ -37,13 +37,14 @@ export class CalculatorPage {
     for (let attempt = 1; attempt <= 3; attempt++) {
       try {
         await this.page.goto('https://testsheepnz.github.io/BasicCalculator.html', {
-          waitUntil: 'domcontentloaded',
-          timeout: 20000
+          waitUntil: 'commit',
+          timeout: 15000
         });
+        await this.buildDropdown.waitFor({ state: 'visible', timeout: 10000 });
         return;
       } catch (err) {
         if (attempt === 3) throw err;
-        await this.page.waitForTimeout(1000);
+        await this.page.waitForTimeout(500).catch(() => {});
       }
     }
   }
@@ -95,11 +96,17 @@ export class CalculatorPage {
   }
 
   async waitForCalculation() {
-    try {
-      await this.calculatingSpinner.waitFor({ state: 'hidden', timeout: 3000 });
-    } catch {
-      // fallback if spinner finishes fast
-    }
+    // Basic Calculator có setTimeout ngẫu nhiên đến 1000ms.
+    // Chờ cho đến khi answerField có giá trị HOẶC errorMsgField có text HOẶC spinner ẩn và nút mở khóa
+    await this.page.waitForFunction(() => {
+      const ans = (document.getElementById('numberAnswerField') as HTMLInputElement)?.value;
+      const err = document.getElementById('errorMsgField')?.textContent?.trim();
+      const spinner = document.getElementById('calculatingForm') as HTMLElement;
+      const calcBtn = document.getElementById('calculateButton') as HTMLInputElement;
+      return (ans !== undefined && ans !== '') || (err !== undefined && err !== '') || (spinner?.hidden && calcBtn && !calcBtn.disabled);
+    }, { timeout: 5000 }).catch(() => {});
+
+    // Fallback unlock nếu gặp bug chia cho 0
     await this.page.evaluate(() => {
       // @ts-ignore
       if (typeof unlockCalculate === 'function' && document.getElementById('calculateButton')?.disabled) {
@@ -110,9 +117,17 @@ export class CalculatorPage {
   }
 
   async clickClear() {
-    if (await this.clearBtn.isEnabled()) {
-      await this.clearBtn.click();
-    }
+    await this.page.evaluate(() => {
+      const btn = document.getElementById('clearButton') as HTMLInputElement;
+      // @ts-ignore
+      const build = (document.getElementById('selectBuild') as HTMLSelectElement)?.value;
+      // @ts-ignore
+      if (build !== '5' && btn?.disabled && typeof unlockCalculate === 'function') {
+        // @ts-ignore
+        unlockCalculate();
+      }
+    });
+    await this.clearBtn.click();
   }
 
   async getAnswer(): Promise<string> {

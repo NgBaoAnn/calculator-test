@@ -10,6 +10,73 @@
 ---
 
 ```text
+* commit 7b2224a6da3acae475ccbc4070a3e56de6042b52
+| Author: NgBaoAnn <baoan1real1@gmail.com>
+| Date:   Mon Sep 28 20:30:59 2026 +0700
+| 
+|     ai template 205 207
+| 
+|  reports/ai-audit-report-23120205.md | 144 +++++++++++
+|  reports/ai-audit-report-23120207.md | 181 ++++++++++++++
+|  reports/ai-critique-23120205.md     |  23 ++
+|  reports/ai-critique-23120207.md     |  23 ++
+|  reports/git-commit-log-23120205.md  | 434 ++++++++++++++++++++++++++++++++++
+|  reports/git-commit-log-23120207.md  | 434 ++++++++++++++++++++++++++++++++++
+|  6 files changed, 1239 insertions(+)
+| 
+* commit 9e3f3e6f50b9f691cc4c3071abb6209db2a33639
+| Author: tzin1401 <nguyenlethevinh14@gmail.com>
+| Date:   Mon Sep 28 20:30:06 2026 +0700
+| 
+|     docs: add AI critique and git commit log
+| 
+|  .../ai-audit-report-23120190.md                   |   0
+|  docs/23120190/ai-critique-23120190.md             |   7 +
+|  docs/23120190/git-commit-log-23120190.md          | 463 ++++++++++++++++++++
+|  3 files changed, 470 insertions(+)
+| 
+* commit 14bb4502248feaecfb92a84278b8fe084c87f45f
+| Author: tzin1401 <nguyenlethevinh14@gmail.com>
+| Date:   Mon Sep 28 20:22:33 2026 +0700
+| 
+|     Publish verified calculator bug reports
+| 
+|  docs/AI_Audit_Report/ai-audit-report-23120190.md |  28 +
+|  tests/test-runs/README.md                        |   9 +-
+|  tests/test-runs/bug-reports-draft.md             | 268 +--------
+|  tests/test-runs/bug-reports.md                   | 663 +++++++++++++++++++++
+|  tests/test-runs/source-findings.md               |   4 +-
+|  5 files changed, 700 insertions(+), 272 deletions(-)
+| 
+* commit f445eca13ad40fab6e057ecb0a0522345924be61
+| Author: tzin1401 <nguyenlethevinh14@gmail.com>
+| Date:   Mon Sep 28 20:08:06 2026 +0700
+| 
+|     Align Playwright cases and record Build 1-9 test runs
+| 
+|  docs/AI_Audit_Report/ai-audit-report-23120190.md  | 343 ++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-1.json         | 442 ++++++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-2.json         | 461 +++++++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-3.json         | 443 ++++++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-4.json         | 444 ++++++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-5.json         | 434 ++++++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-6.json         | 437 ++++++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-7.json         | 484 ++++++++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-8.json         | 473 +++++++++++++++++++
+|  .../2026-09-28T12-26-44-978Z/build-9.json         | 429 +++++++++++++++++
+|  .../automated/2026-09-28T12-26-44-978Z/summary.md |  20 +
+|  tests/test-runs/sprint-1-test-run.md              | 426 ++++++++---------
+|  tests/test-runs/sprint-2-regression.md            | 424 ++++++++---------
+|  tests/test-runs/sprint-3-regression.md            | 424 ++++++++---------
+|  tests/test-scripts/fixtures/base-test.ts          |   2 +-
+|  tests/test-scripts/pages/calculator.page.ts       |  53 +--
+|  tests/test-scripts/runners/build-pair-runner.ts   | 203 ++++----
+|  .../specs/module-1-arithmetic.spec.ts             |  40 +-
+|  .../test-scripts/specs/module-2-division.spec.ts  |  37 +-
+|  .../specs/module-3-concatenate.spec.ts            |  78 +---
+|  .../specs/module-4-formatting.spec.ts             | 303 ++++++------
+|  21 files changed, 5394 insertions(+), 1006 deletions(-)
+| 
 * commit a3679c1deb2df20b89de552b8a31068fccadcbe4
 | Author: tzin1401 <nguyenlethevinh14@gmail.com>
 | Date:   Mon Sep 28 16:10:51 2026 +0700

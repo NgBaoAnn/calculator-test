@@ -4,7 +4,9 @@
 
 Có 69 test case trên mỗi Build 1–9, tổng cộng 621 cặp Test Case ID × Build. Ba bảng sprint giữ biểu mẫu sáu cột **Test Case ID, Module, Tester, Result, Related Bug, Note** như mẫu báo cáo.
 
-Các giá trị `Result` hiện là **suy luận từ mã nguồn, chưa chạy test thực tế**. Chúng được điền sau khi đối chiếu JavaScript nhúng trong [trang Basic Calculator](https://testsheepnz.github.io/BasicCalculator.html) với Test steps và Expected result của từng case. Bản HTML đối chiếu ngày 2026-09-28 có SHA-256 `475f650ab2607d77620ac20269f95b845d7c210209542ecd492bd4cdc551d099`. Không có log, ảnh, trace, thời điểm chạy hay Bug Issue xác minh. Các bảng tổng hợp trong sprint chỉ đếm nhãn suy luận, không phải số ca đã thực thi.
+`Result` trong ba bảng sprint lấy từ [lượt chạy Playwright thực tế ngày 28/09/2026](automated/2026-09-28T12-26-44-978Z/summary.md): **358 Pass, 195 Fail, 68 Blocked**. Có JSON theo từng Test Case ID và Build. Lượt chạy không giữ screenshot/video/trace; các phát hiện khi đọc mã nằm riêng ở [source-findings.md](source-findings.md).
+
+[Bug reports chính](bug-reports.md) nhóm 195 Fail thành 11 báo cáo có bước tái hiện và bằng chứng. Các mã `BUG-SRC-*` là mã nội bộ, chưa phải GitHub Issue ID.
 
 | Sprint | Build | Số case | File kết quả |
 | :--- | :--- | ---: | :--- |
@@ -14,7 +16,7 @@ Các giá trị `Result` hiện là **suy luận từ mã nguồn, chưa chạy 
 
 ## Phân công
 
-Mỗi Build có đúng một người phụ trách. Tên ở cột `Tester` là **người được phân công**.
+Mỗi Build có đúng một người phụ trách. Tên ở cột `Tester` là **người được phân công**; việc thực thi lượt chạy trên do Playwright thực hiện.
 
 | Người phụ trách | Build | Số Build |
 | :--- | :--- | ---: |
@@ -26,5 +28,4 @@ Mỗi Build có đúng một người phụ trách. Tên ở cột `Tester` là 
 
 ## Quy ước ghi kết quả
 
-`Pass` nghĩa là mã nguồn có vẻ đáp ứng Expected result; `Fail` nghĩa là có ít nhất một bước hoặc kết quả dự kiến sai; `Blocked` nghĩa là không thể hoàn tất ca do điều khiển hoặc trạng thái bị khóa. `Related Bug` liên kết đến [mã lỗi tham chiếu từ mã nguồn](source-findings.md); các mã này chưa phải GitHub Issue hoặc bug được xác minh bằng chạy test. `Note` ghi hành vi liên quan đến từng kết quả.
-
+`Pass` nghĩa là Playwright chạy và các assertion đạt; `Fail` nghĩa là có assertion hoặc thao tác thất bại; `Blocked` nghĩa là test script đã skip, chưa có kết quả thực thi cho ca đó. `Related Bug` liên kết đến [mã tham chiếu nội bộ](source-findings.md); các mã này chưa phải GitHub Issue. `Note` ghi Expected/Received khi Fail hoặc lý do skip khi Blocked.

@@ -1,6 +1,6 @@
 # Mã lỗi tham chiếu từ phân tích mã nguồn
 
-Các mã `BUG-SRC-*` dưới đây chỉ định danh **phát hiện khi đọc mã**, chưa phải GitHub Issue hoặc bug đã xác minh bằng chạy test. Chúng được dùng ở cột `Related Bug` của ba bảng sprint. Nguồn đối chiếu: [Basic Calculator](https://testsheepnz.github.io/BasicCalculator.html), HTML SHA-256 `475f650ab2607d77620ac20269f95b845d7c210209542ecd492bd4cdc551d099` (đọc ngày 2026-09-28).
+Các mã `BUG-SRC-*` bắt nguồn từ bước đọc mã và được dùng ở cột `Related Bug` của ba bảng sprint. [Bug reports chính](bug-reports.md) bổ sung bằng chứng từ lượt chạy Playwright thực tế; các mã này chưa phải GitHub Issue ID. Nguồn đối chiếu mã: [Basic Calculator](https://testsheepnz.github.io/BasicCalculator.html), HTML SHA-256 `475f650ab2607d77620ac20269f95b845d7c210209542ecd492bd4cdc551d099` (đọc ngày 2026-09-28).
 
 ## BUG-SRC-01
 
@@ -36,7 +36,7 @@ Build 8 hoán đổi First number và Second number; phép toán không giao ho�
 
 ## BUG-SRC-09
 
-Build 9 ẩn và vô hiệu hóa Second number cùng Calculate; theo quy ước của báo cáo này, mọi ca không Pass ở Build 9 được ghi Blocked.
+Mã nguồn Build 9 ẩn và vô hiệu hóa Second number cùng Calculate. Trong lượt chạy Playwright, `TC-BLD-009` Fail do Second number bị ẩn; 68 ca khác được script skip và ghi Blocked.
 
 ## BUG-SRC-10
 

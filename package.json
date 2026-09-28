@@ -1,0 +1,26 @@
+{
+  "name": "calculator-test-automation",
+  "version": "1.0.0",
+  "description": "Playwright automated test suite for Basic Calculator (Builds 1-9)",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:pair": "ts-node test-scripts/runners/build-pair-runner.ts",
+    "test:all-pairs": "ts-node test-scripts/runners/build-pair-runner.ts --all-pairs",
+    "test:report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "calculator",
+    "qa"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

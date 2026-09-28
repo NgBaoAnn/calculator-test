@@ -11,7 +11,7 @@ Ma trận Truy xuất Nguồn gốc Yêu cầu (RTM) đối với ứng dụng *
 
 | Module | Tên Module | Người phụ trách | Số Test Cases mẫu | Tỷ lệ bao phủ |
 | :---: | :--- | :--- | :---: | :---: |
-| **Module 1** | Phép tính Số học Cơ bản & Kiểm thử Biên | Thành viên 1 | 2 | 100% |
+| **Module 1** | Phép tính Số học Cơ bản & Kiểm thử Biên | Thành viên 1 | 18 | 100% |
 | **Module 2** | Phép Chia & Ngoại lệ Toán học | Thành viên 2 | 2 | 100% |
 | **Module 3** | Ghép Chuỗi & Kiểm tra Hợp lệ Dữ liệu | Thành viên 3 | 2 | 100% |
 | **Module 4** | Định dạng Kết quả, Điều khiển & Đa phiên bản | Thành viên 4 | 2 | 100% |
@@ -22,7 +22,7 @@ Ma trận Truy xuất Nguồn gốc Yêu cầu (RTM) đối với ứng dụng *
 
 | Mã Yêu cầu (Req ID) | Module | Mô tả Yêu cầu Chức năng | Mã Test Case | Loại kiểm thử | Kỹ thuật áp dụng |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **FR-CALC-01** | Module 1 (Arithmetic) | Thực hiện chính xác các phép toán Cộng, Trừ, Nhân và ràng buộc biên độ dài tối đa 10 ký tự. | `TC-ARI-001`<br>`TC-ARI-002` | Functional<br>Boundary | Phân vùng tương đương (EP)<br>Phân tích giá trị biên (BVA) |
+| **FR-CALC-01** | Module 1 (Arithmetic) | Thực hiện chính xác các phép toán Cộng, Trừ, Nhân và ràng buộc biên độ dài tối đa 10 ký tự. | `TC-ARI-001` → `TC-ARI-018` | Functional<br>Boundary | Phân vùng tương đương (EP)<br>Phân tích giá trị biên (BVA) |
 | **FR-CALC-02** | Module 2 (Division) | Thực hiện phép Chia số nguyên, số thực; xử lý ngoại lệ Chia cho 0 bằng thông báo "Divide by zero error!". | `TC-DIV-001`<br>`TC-DIV-002` | Functional<br>Negative | Phân vùng tương đương (EP)<br>Đoán lỗi (Error Guessing) |
 | **FR-CALC-03** | Module 3 (Concatenate) | Ghép chuỗi văn bản và số; kiểm tra validation bắt lỗi nhập ký tự không phải số ("is not a number"). | `TC-CON-001`<br>`TC-CON-002` | Functional<br>Validation | Phân vùng tương đương (EP)<br>Negative Testing |
 | **FR-CALC-04** | Module 4 (Formatting) | Tùy chọn làm tròn số nguyên "Integers only", chức năng nút Clear, Calculate và đối sánh 9 bản Builds. | `TC-FMT-001`<br>`TC-FMT-002` | Functional<br>UI / State | State Transition<br>Bug Hunting Matrix |

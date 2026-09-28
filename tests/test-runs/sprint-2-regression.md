@@ -1,64 +1,37 @@
-# 🔄 KẾ HOẠCH & KẾT QUẢ THỰC HIỆN KIỂM THỬ HỒI QUY: SPRINT 2 (REGRESSION RUN)
+# 🔄 KẾ HOẠCH & KẾT QUẢ THỰC HIỆN KIỂM THỬ: SPRINT 2 (BUG HUNTING BUILDS 1-9)
 
 ---
 
-## 📌 THÔNG TIN ĐỢT KIỂM THỬ (REGRESSION METADATA)
+## 📌 THÔNG TIN ĐỢT KIỂM THỬ (TEST RUN METADATA)
 
 | Mục | Thông tin chi tiết |
 | :--- | :--- |
-| **Mã Test Run** | `TR-SPRINT-02-REG` |
-| **Tên đợt kiểm thử** | Sprint 2 - Regression Testing & Bug Verification |
-| **Môi trường thử nghiệm** | Staging (`https://staging.example.com`) |
-| **Phiên bản ứng dụng (Build)** | `v1.1.0-rc.2` |
-| **Hệ điều hành / Trình duyệt** | Chrome, Firefox, Edge, Safari (Latest versions) |
+| **Mã Test Run** | `TR-SPRINT-02-BUILDS` |
+| **Tên đợt kiểm thử** | Sprint 2 - Bug Hunting Across Builds 1 to 9 & Regression |
+| **Môi trường thử nghiệm** | Web: `https://testsheepnz.github.io/BasicCalculator.html` |
+| **Các phiên bản kiểm thử** | `Build 1` đến `Build 9` |
 | **Thời gian thực hiện** | 2026-10-05 đến 2026-10-09 |
-| **Mục tiêu kiểm thử** | 1. Xác minh các lỗi phát hiện tại Sprint 1 đã được sửa triệt để.<br>2. Đảm bảo mã nguồn mới không làm ảnh hưởng đến các chức năng cũ đang hoạt động tốt. |
+| **Người thực hiện** | Nhóm 4 thành viên |
 
 ---
 
-## 🎯 CHIẾN LƯỢC KIỂM THỬ HỒI QUY (REGRESSION STRATEGY)
-1. **Defect Verification**: Kiểm thử lại toàn bộ các bug đã được đội phát triển đánh dấu `Resolved/Fixed` trong Sprint 1 (`BUG-001`, `BUG-002`, `BUG-003`).
-2. **Core Smoke & Sanity**: Chạy lại các luồng cốt lõi (Authentication, Cart & Checkout).
-3. **Boundary & Edge Cases**: Kiểm tra lại các trường hợp biên và xử lý lỗi hệ thống.
+## 🎯 CHIẾN LƯỢC KIỂM THỬ (TEST STRATEGY)
+1. Chạy lại bộ kịch bản kiểm thử cốt lõi (Regression Suite) trên từng bản Build từ 1 đến 9.
+2. Đối chiếu kết quả thực tế trên từng Build với kết quả chuẩn trên bản Prototype.
+3. Ghi nhận lỗi đặc thù của từng bản Build vào bảng ma trận phát hiện lỗi.
 
 ---
 
-## 📊 TỔNG KẾT KẾT QUẢ (EXECUTIVE SUMMARY)
+## 🐛 MA TRẬN BẮT LỖI TRÊN CÁC BẢN BUILD (BUG HUNTING MATRIX)
 
-| Chỉ số | Số lượng | Tỷ lệ (%) |
-| :--- | :---: | :---: |
-| **Tổng số Test Cases Hồi quy** | 15 | 100% |
-| 🟢 **Đạt (Passed)** | 15 | 100% |
-| 🔴 **Thất bại (Failed)** | 0 | 0% |
-| 🟡 **Bị chặn (Blocked)** | 0 | 0% |
-| **Bugs đã Verify & Đóng (Closed)** | **3 / 3** | **100%** |
-
----
-
-## 🔍 CHI TIẾT TÁI KIỂM THỬ LỖI (DEFECT RE-TEST RESULTS)
-
-| Mã Bug | Test Case liên quan | Kết quả Re-test | Trạng thái mới | Ghi chú từ Tester |
-| :---: | :---: | :---: | :---: | :--- |
-| `BUG-001` | `TC-LOGIN-005` | `PASSED` | `Closed` | Tài khoản bị tạm khóa 15 phút sau 5 lần nhập sai. |
-| `BUG-002` | `TC-REG-003` | `PASSED` | `Closed` | Hệ thống bắt buộc mật khẩu tối thiểu 8 ký tự, có chữ hoa, số và ký tự đặc biệt. |
-| `BUG-003` | `TC-CHK-002` | `PASSED` | `Closed` | Trả về thông báo lỗi thẻ hết hạn sau 1.2s, không còn tình trạng gateway timeout. |
+| Mã Build | Module ảnh hưởng | Mã Test Case | Hiện tượng lỗi thực tế phát hiện | Đánh giá lỗi |
+| :---: | :--- | :---: | :--- | :---: |
+| **Build 1** | Module 1 (Arithmetic) | `TC-ARI-001` | Phép trừ bị tính sai kết quả hoặc phép cộng cộng chuỗi | Có lỗi |
+| **Build 2** | Module 2 (Division) | `TC-DIV-002` | Chia cho 0 không báo lỗi mà trả về giá trị bất thường | Có lỗi |
+| **Build 3** | Module 3 (Concatenate) | `TC-CON-001` | Ghép chuỗi bị chèn ký tự lạ hoặc lỗi hiển thị | Có lỗi |
+| **Build 4** | Module 4 (Formatting) | `TC-FMT-001` | Checkbox "Integers only" không làm tròn số | Có lỗi |
 
 ---
 
-## 📝 BẢNG THỰC THI KIỂM THỬ HỒI QUY (REGRESSION SUITE EXECUTION)
-
-| STT | Mã Test Case | Phân loại | Tên Test Case | Kết quả | Tester | Ghi chú |
-| :---: | :--- | :--- | :--- | :---: | :---: | :--- |
-| 1 | `TC-LOGIN-001` | Sanity | Đăng nhập với tài khoản hợp lệ | `PASS` | Tester A | Hoạt động bình thường |
-| 2 | `TC-LOGIN-002` | Sanity | Đăng nhập với mật khẩu không đúng | `PASS` | Tester A | Hiển thị cảnh báo đúng |
-| 3 | `TC-LOGIN-005` | Bug Fix | Khóa tài khoản sau 5 lần nhập sai | `PASS` | Tester A | Fix verified |
-| 4 | `TC-REG-001` | Smoke | Đăng ký tài khoản mới thành công | `PASS` | Tester B | Hoạt động bình thường |
-| 5 | `TC-REG-003` | Bug Fix | Validation độ phức tạp của mật khẩu | `PASS` | Tester B | Fix verified |
-| 6 | `TC-CHK-001` | Core E2E | Luồng thanh toán đơn hàng thành công | `PASS` | Tester C | Hoạt động bình thường |
-| 7 | `TC-CHK-002` | Bug Fix | Xử lý lỗi thẻ thanh toán hết hạn | `PASS` | Tester C | Fix verified |
-
----
-
-## 🚀 KẾT LUẬN & QUYẾT ĐỊNH PHÁT HÀNH (RELEASE SIGN-OFF)
-- **Tình trạng chất lượng**: Bản build `v1.1.0-rc.2` đạt toàn bộ các tiêu chí chấp nhận (Acceptance Criteria).
-- **Quyết định**: **GO TO PRODUCTION** ✅.
+## 🚀 KẾT LUẬN
+- Ma trận bắt lỗi giúp sinh viên đối sánh chính xác hành vi sai lệch giữa phiên bản lỗi và phiên bản chuẩn Prototype theo đúng mục tiêu môn học Kiểm thử và Đảm bảo Chất lượng Phần mềm (KCPM).

@@ -1,4 +1,4 @@
-# 📋 KẾ HOẠCH & KẾT QUẢ THỰC HIỆN TEST RUN: SPRINT 1
+# 📋 KẾ HOẠCH & KẾT QUẢ THỰC HIỆN TEST RUN: SPRINT 1 (PROTOTYPE)
 
 ---
 
@@ -7,13 +7,13 @@
 | Mục | Thông tin chi tiết |
 | :--- | :--- |
 | **Mã Test Run** | `TR-SPRINT-01` |
-| **Tên đợt kiểm thử** | Sprint 1 Test Execution - Authentication & Core Features |
-| **Môi trường thử nghiệm** | Staging (`https://staging.example.com`) |
-| **Phiên bản ứng dụng (Build)** | `v1.0.0-rc.1` |
-| **Hệ điều hành / Trình duyệt** | Windows 11 (Chrome 122), macOS Sonoma (Safari 17) |
+| **Tên đợt kiểm thử** | Sprint 1 Test Execution - Basic Calculator Prototype & Baseline Testing |
+| **Môi trường thử nghiệm** | Web: `https://testsheepnz.github.io/BasicCalculator.html` |
+| **Phiên bản ứng dụng (Build)** | `Build 0 (Prototype)` |
+| **Trình duyệt / Hệ điều hành** | Chrome 122, Edge, Firefox trên macOS / Windows 11 |
 | **Thời gian thực hiện** | 2026-09-28 đến 2026-10-02 |
 | **Trưởng nhóm QA** | QA Lead |
-| **Người thực hiện** | QA Team (4 Thành viên) |
+| **Người thực hiện** | Nhóm 4 thành viên (Thành viên 1, 2, 3, 4) |
 
 ---
 
@@ -21,48 +21,30 @@
 
 | Chỉ số | Số lượng | Tỷ lệ (%) |
 | :--- | :---: | :---: |
-| **Tổng số Test Cases** | 20 | 100% |
-| 🟢 **Đạt (Passed)** | 16 | 80% |
-| 🔴 **Thất bại (Failed)** | 3 | 15% |
-| 🟡 **Bị chặn (Blocked)** | 1 | 5% |
+| **Tổng số Test Cases** | 8 | 100% |
+| 🟢 **Đạt (Passed)** | 8 | 100% |
+| 🔴 **Thất bại (Failed)** | 0 | 0% |
+| 🟡 **Bị chặn (Blocked)** | 0 | 0% |
 | ⚪ **Chưa chạy (Untested)** | 0 | 0% |
-| **Tỷ lệ Pass / Executed** | **16 / 20** | **80%** |
-
-```
-Trạng thái thực thi:
-[████████████████░░░░] 80% Passed | 15% Failed | 5% Blocked
-```
+| **Tỷ lệ Pass / Executed** | **8 / 8** | **100%** |
 
 ---
 
 ## 📝 BẢNG CHI TIẾT THỰC THI TEST CASES (EXECUTION DETAILS)
 
-| STT | Mã Test Case | Module | Tên Test Case | Kết quả | Người test | Ngày test | Mã Bug (nếu có) |
+| STT | Mã Test Case | Module | Tên Test Case | Kết quả | Người test | Ngày test | Ghi chú |
 | :---: | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| 1 | `TC-LOGIN-001` | Login | Đăng nhập hợp lệ | `PASS` | Tester A | 2026-09-28 | - |
-| 2 | `TC-LOGIN-002` | Login | Đăng nhập sai mật khẩu | `PASS` | Tester A | 2026-09-28 | - |
-| 3 | `TC-LOGIN-003` | Login | Đăng nhập với email chưa đăng ký | `PASS` | Tester A | 2026-09-28 | - |
-| 4 | `TC-LOGIN-004` | Login | Đăng nhập để trống trường thông tin | `PASS` | Tester A | 2026-09-28 | - |
-| 5 | `TC-LOGIN-005` | Login | Khóa tài khoản sau 5 lần nhập sai | `FAIL` | Tester A | 2026-09-28 | [BUG-001](#danh-sách-lỗi-phát-hiện-defects-log) |
-| 6 | `TC-REG-001` | Register | Đăng ký tài khoản hợp lệ | `PASS` | Tester B | 2026-09-29 | - |
-| 7 | `TC-REG-002` | Register | Đăng ký với email trùng lặp | `PASS` | Tester B | 2026-09-29 | - |
-| 8 | `TC-REG-003` | Register | Mật khẩu không thỏa độ phức tạp | `FAIL` | Tester B | 2026-09-29 | [BUG-002](#danh-sách-lỗi-phát-hiện-defects-log) |
-| 9 | `TC-CHK-001` | Checkout | Thanh toán thẻ tín dụng hợp lệ | `PASS` | Tester C | 2026-09-30 | - |
-| 10 | `TC-CHK-002` | Checkout | Thanh toán với thẻ hết hạn | `BLOCK` | Tester C | 2026-09-30 | [BUG-003](#danh-sách-lỗi-phát-hiện-defects-log) |
-
----
-
-## 🐛 DANH SÁCH LỖI PHÁT HIỆN (DEFECTS LOG)
-
-| Mã Bug | Test Case | Tiêu đề lỗi | Mức độ nghiêm trọng | Trạng thái | Gán cho |
-| :---: | :---: | :--- | :---: | :---: | :---: |
-| `BUG-001` | `TC-LOGIN-005` | Hệ thống không khóa tài khoản sau 5 lần nhập sai mật khẩu | `High` | `Open` | Dev Team |
-| `BUG-002` | `TC-REG-003` | Cho phép đăng ký mật khẩu chỉ có 4 ký tự | `Medium` | `In Progress` | Dev Team |
-| `BUG-003` | `TC-CHK-002` | Payment Gateway timeout khi kiểm tra thẻ hết hạn | `Critical` | `Open` | Dev Team |
+| 1 | `TC-ARI-001` | Module 1 | Phép cộng hai số nguyên dương | `PASS` | Thành viên 1 | 2026-09-28 | Kết quả chính xác |
+| 2 | `TC-ARI-002` | Module 1 | Kiểm tra biên độ dài 10 chữ số | `PASS` | Thành viên 1 | 2026-09-28 | maxlength=10 hoạt động |
+| 3 | `TC-DIV-001` | Module 2 | Phép chia hết hai số nguyên | `PASS` | Thành viên 2 | 2026-09-28 | Kết quả chính xác |
+| 4 | `TC-DIV-002` | Module 2 | Bắt lỗi ngoại lệ chia cho 0 | `PASS` | Thành viên 2 | 2026-09-28 | Bắt đúng "Divide by zero error!" |
+| 5 | `TC-CON-001` | Module 3 | Phép ghép chuỗi hai số hợp lệ | `PASS` | Thành viên 3 | 2026-09-28 | Nối chuỗi đúng |
+| 6 | `TC-CON-002` | Module 3 | Bắt lỗi nhập chữ vào phép toán | `PASS` | Thành viên 3 | 2026-09-28 | Bắt đúng "is not a number" |
+| 7 | `TC-FMT-001` | Module 4 | Làm tròn số nguyên Integers only | `PASS` | Thành viên 4 | 2026-09-28 | Làm tròn đúng |
+| 8 | `TC-FMT-002` | Module 4 | Nút Clear xóa kết quả | `PASS` | Thành viên 4 | 2026-09-28 | Reset thành công |
 
 ---
 
 ## 🎯 ĐÁNH GIÁ & KẾT LUẬN (CONCLUSION)
-- **Đánh giá chung**: Các tính năng luồng chính (Happy Path) của Authentication và Checkout cơ bản hoạt động ổn định.
-- **Rủi ro**: Lỗi bảo mật liên quan đến giới hạn số lần thử mật khẩu và độ mạnh mật khẩu cần được khắc phục trước khi triển khai production.
-- **Khuyến nghị**: Tiếp tục sửa lỗi `BUG-001`, `BUG-002`, `BUG-003` và tiến hành Regression Test ở Sprint 2.
+- **Đánh giá chung**: Trên phiên bản chuẩn **Prototype**, toàn bộ 4 Module đều hoạt động chính xác theo đặc tả toán học và yêu cầu giao diện.
+- **Kế hoạch tiếp theo**: Tiến hành Sprint 2 kiểm thử đối sánh (Bug Hunting Matrix) trên các bản build lỗi từ **Build 1 đến Build 9** để bắt các lỗi có chủ đích.

@@ -1,33 +1,29 @@
-# TC-FMT-001: Làm tròn kết quả số nguyên khi chọn Integers only
+# TC-FMT-001: Integers only cắt phần thập phân khi được chọn trước Calculate
 
 ## Requirement ID
 FR-CALC-04
 
 ## Module / Test type / Technique
-Module 4 - Formatting & Controls / Functional / State Transition
+Module 4 - Formatting & Controls / Functional / Equivalence Partitioning
 
 ## Preconditions
-- Người dùng đã truy cập trang: https://testsheepnz.github.io/BasicCalculator.html
-- Chọn Build: Prototype
+- Mở https://testsheepnz.github.io/BasicCalculator.html và chọn Prototype.
+- Nhấn Clear để Answer rỗng và Integers only bỏ chọn.
 
 ## Test data
-| Build | Prototype |
-| First number | 5 |
-| Second number | 2 |
-| Operation | Divide |
-| Integers only | Checked |
+| First number | Second number | Operation | Integers only | Kết quả mong đợi |
+| --- | --- | --- | --- | --- |
+| 5 | 2 | Divide | Checked | 2 |
+| -5 | 2 | Divide | Checked | -2 |
 
 ## Test steps
-1. Truy cập trang web Basic Calculator
-2. Chọn Build "Prototype"
-3. Nhập "5" vào trường First number
-4. Nhập "2" vào trường Second number
-5. Chọn Operation là "Divide"
-6. Tích chọn checkbox "Integers only"
-7. Bấm nút "Calculate"
+1. Với từng dòng dữ liệu, nhập hai số, chọn Divide và tích Integers only.
+2. Nhấn Calculate; chờ `Calculating ...` biến mất và Answer hiện lại.
+3. Đọc Answer; nhấn Clear trước khi thử dòng tiếp theo.
 
 ## Expected result
-Trường Answer hiển thị kết quả làm tròn thành số nguyên là "2" (thay vì 2.5).
+- Answer khớp cột kết quả mong đợi, không có thông báo lỗi.
+- Phần thập phân bị cắt về 0; đây không phải làm tròn tới số nguyên gần nhất.
 
 ## Status / Related bugs
 Not Run / None

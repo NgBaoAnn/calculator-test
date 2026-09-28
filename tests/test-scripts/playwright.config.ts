@@ -15,7 +15,7 @@ export default defineConfig({
   workers: process.env.CI ? 2 : 2,
   reporter: [
     ['list'],
-    ['html', { open: 'never', outputFolder: '../playwright-report' }]
+    ['html', { open: 'never', outputFolder: '../../playwright-report' }]
   ],
   use: {
     baseURL: 'https://testsheepnz.github.io/BasicCalculator.html',

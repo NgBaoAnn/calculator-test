@@ -18,7 +18,7 @@ function runBuildTest(build: string, specPattern?: string): RunResult {
   const args = [
     'playwright',
     'test',
-    specPattern ? specPattern : 'test-scripts/specs',
+    specPattern ? specPattern : path.resolve(__dirname, '../specs'),
     `--config=${configPath}`,
     '--reporter=list'
   ];

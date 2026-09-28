@@ -1,0 +1,97 @@
+import { TestCaseData, BuildBugTestCase } from './types';
+
+export const formattingTestCases: TestCaseData[] = [
+  {
+    id: 'TC-FMT-001',
+    name: 'Tích chọn Integers only trước khi tính toán',
+    firstNumber: '7',
+    secondNumber: '2',
+    operation: 'Divide',
+    integersOnly: true,
+    expectedAnswer: '3',
+  },
+  {
+    id: 'TC-FMT-005',
+    name: 'Làm tròn số âm với Integers only',
+    firstNumber: '-19',
+    secondNumber: '5',
+    operation: 'Divide',
+    integersOnly: true,
+    expectedAnswer: '-3',
+  },
+];
+
+export const buildBugTestCases: BuildBugTestCase[] = [
+  {
+    id: 'TC-BLD-001',
+    name: 'Build 1: Không kiểm tra số hợp lệ',
+    targetBuild: '1',
+    firstNumber: 'abc',
+    secondNumber: 'def',
+    operation: 'Add',
+    expectedBugDescription: 'Không báo lỗi Number is not a number mà tính NaN hoặc sai',
+  },
+  {
+    id: 'TC-BLD-002',
+    name: 'Build 2: Đảo ngược giữa phép Add và Concatenate',
+    targetBuild: '2',
+    firstNumber: '10',
+    secondNumber: '20',
+    operation: 'Add',
+    expectedBugDescription: 'Phép Add bị đảo ngược thực hiện như Concatenate cho kết quả 1020',
+  },
+  {
+    id: 'TC-BLD-003',
+    name: 'Build 3: Luôn ép kiểm tra kiểu số kể cả khi chọn Concatenate',
+    targetBuild: '3',
+    firstNumber: 'hello',
+    secondNumber: 'world',
+    operation: 'Concatenate',
+    expectedBugDescription: 'Concatenate bị chặn và báo lỗi Number 1 is not a number',
+  },
+  {
+    id: 'TC-BLD-004',
+    name: 'Build 4: Khóa cứng ở chế độ Integers only',
+    targetBuild: '4',
+    expectedBugDescription: 'Checkbox Integers only bị disabled và luôn ở trạng thái checked',
+  },
+  {
+    id: 'TC-BLD-005',
+    name: 'Build 5: Nút Clear bị vô hiệu hóa',
+    targetBuild: '5',
+    expectedBugDescription: 'Nút Clear có thuộc tính disabled = true, không thể click',
+  },
+  {
+    id: 'TC-BLD-006',
+    name: 'Build 6: Không bắt lỗi chia cho 0',
+    targetBuild: '6',
+    firstNumber: '10',
+    secondNumber: '0',
+    operation: 'Divide',
+    expectedBugDescription: 'Không hiển thị Divide by zero error! mà xuất kết quả Infinity',
+  },
+  {
+    id: 'TC-BLD-007',
+    name: 'Build 7: Sử dụng Answer cũ làm Number 1',
+    targetBuild: '7',
+    firstNumber: '10',
+    secondNumber: '3',
+    operation: 'Add',
+    expectedBugDescription: 'Sử dụng giá trị answer trước đó làm toán hạng 1 thay vì giá trị nhập',
+  },
+  {
+    id: 'TC-BLD-008',
+    name: 'Build 8: Đảo ngược vị trí Number 1 và Number 2',
+    targetBuild: '8',
+    firstNumber: '10',
+    secondNumber: '2',
+    operation: 'Subtract',
+    expectedBugDescription: 'Hệ thống tính 2 - 10 ra kết quả -8 thay vì 8',
+  },
+  {
+    id: 'TC-BLD-009',
+    name: 'Build 9: Các phần tử giao diện Number 2 và Calculate bị biến mất',
+    targetBuild: '9',
+    expectedBugDescription: 'Trường number2Field và nút calculateButton bị ẩn (hidden = true) và disabled',
+  },
+];

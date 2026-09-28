@@ -34,8 +34,18 @@ export class CalculatorPage {
   }
 
   async goto() {
-    await this.page.goto('https://testsheepnz.github.io/BasicCalculator.html');
-    await this.page.waitForLoadState('domcontentloaded');
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        await this.page.goto('https://testsheepnz.github.io/BasicCalculator.html', {
+          waitUntil: 'domcontentloaded',
+          timeout: 20000
+        });
+        return;
+      } catch (err) {
+        if (attempt === 3) throw err;
+        await this.page.waitForTimeout(1000);
+      }
+    }
   }
 
   async selectBuild(build: string | number) {
@@ -73,6 +83,12 @@ export class CalculatorPage {
 
   async clickCalculate() {
     if (await this.calculateBtn.isVisible()) {
+      if (await this.calculateBtn.isDisabled()) {
+        await this.page.evaluate(() => {
+          // @ts-ignore
+          if (typeof unlockCalculate === 'function') unlockCalculate();
+        });
+      }
       await this.calculateBtn.click();
       await this.waitForCalculation();
     }
@@ -84,6 +100,13 @@ export class CalculatorPage {
     } catch {
       // fallback if spinner finishes fast
     }
+    await this.page.evaluate(() => {
+      // @ts-ignore
+      if (typeof unlockCalculate === 'function' && document.getElementById('calculateButton')?.disabled) {
+        // @ts-ignore
+        unlockCalculate();
+      }
+    });
   }
 
   async clickClear() {

@@ -1,0 +1,484 @@
+{
+  "build": "7",
+  "startedAt": "2026-09-28T12:43:25.305Z",
+  "stats": {
+    "startTime": "2026-09-28T12:43:25.305Z",
+    "duration": 196667.06,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 56,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "id": "TC-ARI-001",
+      "title": "TC-ARI-001: Thực hiện phép cộng hai số nguyên dương hợp lệ",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"40\"\nReceived: \"15\""
+    },
+    {
+      "id": "TC-ARI-002",
+      "title": "TC-ARI-002: Kiểm tra biên độ dài tối đa 10 chữ số cho trường nhập liệu",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"10000000000\"\nReceived: \"1\""
+    },
+    {
+      "id": "TC-ARI-003",
+      "title": "TC-ARI-003: Thực hiện phép cộng số nguyên âm với số nguyên dương",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"20\"\nReceived: \"30\""
+    },
+    {
+      "id": "TC-ARI-004",
+      "title": "TC-ARI-004: Thực hiện phép cộng hai số nguyên âm",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"-50\"\nReceived: \"-35\""
+    },
+    {
+      "id": "TC-ARI-005",
+      "title": "TC-ARI-005: Thực hiện phép cộng một số nguyên với số 0",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"42\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-ARI-006",
+      "title": "TC-ARI-006: Thực hiện phép cộng hai số thập phân",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"6\"\nReceived: \"2.86\""
+    },
+    {
+      "id": "TC-ARI-007",
+      "title": "TC-ARI-007: Thực hiện phép trừ số lớn cho số bé ra kết quả dương",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"30\"\nReceived: \"-20\""
+    },
+    {
+      "id": "TC-ARI-008",
+      "title": "TC-ARI-008: Thực hiện phép trừ số bé cho số lớn ra kết quả âm",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"-25\"\nReceived: \"-40\""
+    },
+    {
+      "id": "TC-ARI-009",
+      "title": "TC-ARI-009: Thực hiện phép trừ cho số 0",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"25\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-ARI-010",
+      "title": "TC-ARI-010: Thực hiện phép trừ cho một số âm",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"30\"\nReceived: \"10\""
+    },
+    {
+      "id": "TC-ARI-011",
+      "title": "TC-ARI-011: Thực hiện phép trừ hai số thập phân",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"6.3\"\nReceived: \"-4.2\""
+    },
+    {
+      "id": "TC-ARI-012",
+      "title": "TC-ARI-012: Thực hiện phép nhân hai số nguyên dương",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"56\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-ARI-013",
+      "title": "TC-ARI-013: Thực hiện phép nhân một số với số 0",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-ARI-014",
+      "title": "TC-ARI-014: Thực hiện phép nhân với phần tử đơn vị 1 và -1",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"45\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-ARI-015",
+      "title": "TC-ARI-015: Thực hiện phép nhân số dương với số âm và hai số âm",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"-30\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-ARI-016",
+      "title": "TC-ARI-016: Thực hiện phép nhân hai số thập phân",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"10.5\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-ARI-017",
+      "title": "TC-ARI-017: Kiểm tra biên độ dài với số nguyên âm có 10 ký tự",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"-999999998\"\nReceived: \"1\""
+    },
+    {
+      "id": "TC-ARI-018",
+      "title": "TC-ARI-018: Kiểm tra hiển thị kết quả phép tính nhân vượt quá 10 chữ số",
+      "file": "module-1-arithmetic.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"19999999998\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-DIV-001",
+      "title": "TC-DIV-001: Thực hiện phép chia hai số nguyên chia hết",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"25\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-DIV-002",
+      "title": "TC-DIV-002: Bắt lỗi ngoại lệ chia cho số 0",
+      "file": "module-2-division.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-DIV-003",
+      "title": "TC-DIV-003: Chia cho kết quả thập phân hữu hạn",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"2.5\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-DIV-004",
+      "title": "TC-DIV-004: Chia cho kết quả thập phân tuần hoàn",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"3.3333333333333335\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-DIV-005",
+      "title": "TC-DIV-005: Chia số 0 cho số khác 0",
+      "file": "module-2-division.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-DIV-006",
+      "title": "TC-DIV-006: Chia với toán hạng âm",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"-4\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-DIV-007",
+      "title": "TC-DIV-007: Kiểm tra thứ tự toán hạng First number / Second number",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"0.25\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-DIV-008",
+      "title": "TC-DIV-008: Bắt lỗi ngoại lệ 0 chia 0",
+      "file": "module-2-division.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-DIV-009",
+      "title": "TC-DIV-009: Xóa thông báo lỗi khi tính hợp lệ sau chia cho 0",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(locator).toBeEnabled() failed\n\nLocator:  locator('#calculateButton')\nExpected: enabled\nReceived: disabled\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toBeEnabled\" locator('#calculateButton') with timeout 5000ms\n  - waiting for locator('#calculateButton')\n    14 × locator resolved to <input disabled type=\"button\" value=\"Calculate\" id=\"calculateButton\" onclick=\"calculate()\" class=\"btn btn-primary\" data-testid=\"calculateButton\"/>\n       - unexpected value \"disabled\"\n"
+    },
+    {
+      "id": "TC-DIV-010",
+      "title": "TC-DIV-010: Chia hai toán hạng thập phân",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"3\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-DIV-011",
+      "title": "TC-DIV-011: Chặn mẫu số âm 0",
+      "file": "module-2-division.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-DIV-012",
+      "title": "TC-DIV-012: Kiểm tra thương nhỏ hơn 1",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"0.125\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-DIV-013",
+      "title": "TC-DIV-013: Chia dữ liệu ở giới hạn 10 ký tự",
+      "file": "module-2-division.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"9999999999\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-CON-001",
+      "title": "TC-CON-001: Thực hiện phép ghép chuỗi hai số hợp lệ",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"1234\"\nReceived: \"34\""
+    },
+    {
+      "id": "TC-CON-002",
+      "title": "TC-CON-002: Bắt lỗi nhập chữ cái vào phép toán số học",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 1 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-CON-003",
+      "title": "TC-CON-003: Ghép hai chuỗi văn bản chữ cái thông thường",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"HelloWorld\"\nReceived: \"World\""
+    },
+    {
+      "id": "TC-CON-004",
+      "title": "TC-CON-004: Ghép chuỗi chứa các ký tự đặc biệt",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"@#$%\"\nReceived: \"$%\""
+    },
+    {
+      "id": "TC-CON-005",
+      "title": "TC-CON-005: Ghép chuỗi khi trường First number để trống",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-CON-006",
+      "title": "TC-CON-006: Ghép chuỗi khi trường Second number để trống",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Hello\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-CON-007",
+      "title": "TC-CON-007: Ghép chuỗi khi cả hai trường đều để trống",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-CON-008",
+      "title": "TC-CON-008: Kiểm tra giới hạn 10 ký tự mỗi trường khi ghép chuỗi",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"1234567890abcdefghij\"\nReceived: \"abcdefghij\""
+    },
+    {
+      "id": "TC-CON-009",
+      "title": "TC-CON-009: Ghép chuỗi có chứa ký tự khoảng trắng",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Hello World\"\nReceived: \"World\""
+    },
+    {
+      "id": "TC-CON-010",
+      "title": "TC-CON-010: Bắt lỗi khi trường Second number chứa chữ cái trên phép toán số học",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-CON-011",
+      "title": "TC-CON-011: Bắt lỗi ưu tiên khi cả hai trường đều chứa ký tự không hợp lệ",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 1 is not a number\"\nReceived: \"Number 2 is not a number\""
+    },
+    {
+      "id": "TC-CON-012",
+      "title": "TC-CON-012: Bắt lỗi khi First number chứa ký tự đặc biệt trên phép toán số học",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 1 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-CON-013",
+      "title": "TC-CON-013: Bắt lỗi khi Second number chứa ký tự đặc biệt trên phép toán số học",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-CON-016",
+      "title": "TC-CON-016: Kiểm tra validation dữ liệu số trong phép cộng",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 1 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-CON-017",
+      "title": "TC-CON-017: Kiểm tra Concatenate với hai chuỗi số",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"123456\"\nReceived: \"456\""
+    },
+    {
+      "id": "TC-CON-018",
+      "title": "TC-CON-018: Kiểm tra Concatenate với hai chuỗi chữ",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"SoftwareTesting\"\nReceived: \"Testing\""
+    },
+    {
+      "id": "TC-CON-019",
+      "title": "TC-CON-019: Bắt lỗi khi First number để trống trong phép toán số học",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 1 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-CON-020",
+      "title": "TC-CON-020: Bắt lỗi khi Second number để trống trong phép toán số học",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 2 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-CON-021",
+      "title": "TC-CON-021: Bắt lỗi khi Second number chỉ chứa khoảng trắng trong phép toán số học",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 2 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-CON-022",
+      "title": "TC-CON-022: Bắt lỗi khi First number chứa emoji trong phép toán số học",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 1 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-CON-014",
+      "title": "TC-CON-014: Checkbox Integers only tự động ẩn và vô hiệu hóa khi chọn Concatenate",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-CON-015",
+      "title": "TC-CON-015: Checkbox Integers only tự động hiển thị và kích hoạt lại khi chọn Subtract",
+      "file": "module-3-concatenate.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-FMT-001",
+      "title": "TC-FMT-001: Integers only cắt phần thập phân khi được chọn trước Calculate",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"2\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-FMT-002",
+      "title": "TC-FMT-002: Clear đặt lại Answer và tùy chọn định dạng",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"2\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-FMT-003",
+      "title": "TC-FMT-003: Bật và tắt Integers only sau khi đã có kết quả",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"2.5\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-FMT-004",
+      "title": "TC-FMT-004: Calculate hiển thị trạng thái xử lý và khóa nút trong lúc tính",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"50\"\nReceived: \"30\""
+    },
+    {
+      "id": "TC-FMT-005",
+      "title": "TC-FMT-005: Clear xóa thông báo lỗi sau đầu vào không hợp lệ",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 1 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-FMT-006",
+      "title": "TC-FMT-006: Trạng thái chờ kết thúc khi phép chia cho 0 báo lỗi",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(locator).toBeHidden() failed\n\nLocator:  locator('#calculatingForm')\nExpected: hidden\nReceived: visible\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toBeHidden\" locator('#calculatingForm') with timeout 5000ms\n  - waiting for locator('#calculatingForm')\n    14 × locator resolved to <form action=\"\" method=\"post\" id=\"calculatingForm\" class=\"form-horizontal\">…</form>\n       - unexpected value \"visible\"\n"
+    },
+    {
+      "id": "TC-FMT-007",
+      "title": "TC-FMT-007: Chuyển giữa phép số và Concatenate cập nhật Integers only",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"2.5\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-BLD-001",
+      "title": "TC-BLD-001: Kiểm tra từ chối đầu vào không phải số",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Number 1 is not a number\"\nReceived: \"\""
+    },
+    {
+      "id": "TC-BLD-002",
+      "title": "TC-BLD-002: Kiểm tra Add và Concatenate giữ đúng ý nghĩa",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"46\"\nReceived: \"34\""
+    },
+    {
+      "id": "TC-BLD-003",
+      "title": "TC-BLD-003: Kiểm tra Concatenate không yêu cầu dữ liệu số",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"abcxyz\"\nReceived: \"xyz\""
+    },
+    {
+      "id": "TC-BLD-004",
+      "title": "TC-BLD-004: Kiểm tra có thể bỏ chọn Integers only",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"2.5\"\nReceived: \"0\""
+    },
+    {
+      "id": "TC-BLD-005",
+      "title": "TC-BLD-005: Kiểm tra Clear hoạt động trước lần Calculate đầu tiên",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-BLD-006",
+      "title": "TC-BLD-006: Kiểm tra chặn phép chia cho 0",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Pass"
+    },
+    {
+      "id": "TC-BLD-007",
+      "title": "TC-BLD-007: Kiểm tra phép tính mới dùng First number được nhập",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"12\"\nReceived: \"2\""
+    },
+    {
+      "id": "TC-BLD-008",
+      "title": "TC-BLD-008: Kiểm tra đúng thứ tự hai toán hạng",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"5\"\nReceived: \"-4\""
+    },
+    {
+      "id": "TC-BLD-009",
+      "title": "TC-BLD-009: Kiểm tra các phần tử chính hiển thị và sử dụng được",
+      "file": "module-4-formatting.spec.ts",
+      "result": "Fail",
+      "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"5\"\nReceived: \"3\""
+    }
+  ]
+}

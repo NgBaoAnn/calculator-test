@@ -37,10 +37,11 @@ export class CalculatorPage {
     for (let attempt = 1; attempt <= 3; attempt++) {
       try {
         await this.page.goto('https://testsheepnz.github.io/BasicCalculator.html', {
-          waitUntil: 'commit',
+          waitUntil: 'domcontentloaded',
           timeout: 15000
         });
         await this.buildDropdown.waitFor({ state: 'visible', timeout: 10000 });
+        await this.page.waitForFunction(() => typeof (window as any).calculate === 'function');
         return;
       } catch (err) {
         if (attempt === 3) throw err;
@@ -57,9 +58,7 @@ export class CalculatorPage {
   async setNumbers(num1: string, num2?: string) {
     await this.number1Input.fill(num1);
     if (num2 !== undefined) {
-      if (await this.number2Input.isVisible()) {
-        await this.number2Input.fill(num2);
-      }
+      await this.number2Input.fill(num2);
     }
   }
 
@@ -83,50 +82,20 @@ export class CalculatorPage {
   }
 
   async clickCalculate() {
-    if (await this.calculateBtn.isVisible()) {
-      if (await this.calculateBtn.isDisabled()) {
-        await this.page.evaluate(() => {
-          // @ts-ignore
-          if (typeof unlockCalculate === 'function') unlockCalculate();
-        });
-      }
-      await this.calculateBtn.click();
-      await this.waitForCalculation();
-    }
+    const previousError = await this.getErrorMessage();
+    await this.calculateBtn.click();
+    await this.waitForCalculation(previousError);
   }
 
-  async waitForCalculation() {
-    // Basic Calculator có setTimeout ngẫu nhiên đến 1000ms.
-    // Chờ cho đến khi answerField có giá trị HOẶC errorMsgField có text HOẶC spinner ẩn và nút mở khóa
-    await this.page.waitForFunction(() => {
-      const ans = (document.getElementById('numberAnswerField') as HTMLInputElement)?.value;
-      const err = document.getElementById('errorMsgField')?.textContent?.trim();
+  async waitForCalculation(previousError = '') {
+    await this.page.waitForFunction((oldError) => {
+      const err = document.getElementById('errorMsgField')?.textContent?.trim() ?? '';
       const spinner = document.getElementById('calculatingForm') as HTMLElement;
-      const calcBtn = document.getElementById('calculateButton') as HTMLInputElement;
-      return (ans !== undefined && ans !== '') || (err !== undefined && err !== '') || (spinner?.hidden && calcBtn && !calcBtn.disabled);
-    }, { timeout: 5000 }).catch(() => {});
-
-    // Fallback unlock nếu gặp bug chia cho 0
-    await this.page.evaluate(() => {
-      // @ts-ignore
-      if (typeof unlockCalculate === 'function' && document.getElementById('calculateButton')?.disabled) {
-        // @ts-ignore
-        unlockCalculate();
-      }
-    });
+      return spinner.hidden || (err !== '' && err !== oldError);
+    }, previousError, { timeout: 5000 });
   }
 
   async clickClear() {
-    await this.page.evaluate(() => {
-      const btn = document.getElementById('clearButton') as HTMLInputElement;
-      // @ts-ignore
-      const build = (document.getElementById('selectBuild') as HTMLSelectElement)?.value;
-      // @ts-ignore
-      if (build !== '5' && btn?.disabled && typeof unlockCalculate === 'function') {
-        // @ts-ignore
-        unlockCalculate();
-      }
-    });
     await this.clearBtn.click();
   }
 

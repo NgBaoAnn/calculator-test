@@ -10,7 +10,7 @@ export type TestFixtures = {
 };
 
 export const test = baseTest.extend<TestOptions & TestFixtures>({
-  build: [process.env.TARGET_BUILD || '0', { option: true }],
+  build: [process.env.TARGET_BUILD || '1', { option: true }],
 
   calculator: async ({ page, build }, use) => {
     const calc = new CalculatorPage(page);

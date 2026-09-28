@@ -11,10 +11,10 @@ Ma trận Truy xuất Nguồn gốc Yêu cầu (RTM) đối với ứng dụng *
 
 | Module | Tên Module | Người phụ trách | Số Test Cases | Trạng thái thực thi |
 | :---: | :--- | :--- | :---: | :---: |
-| **Module 1** | Phép tính Số học Cơ bản & Kiểm thử Biên | Thành viên 1 | 18 | Chưa đối chiếu báo cáo với testcase |
-| **Module 2** | Phép Chia & Ngoại lệ Toán học | Thành viên 2 | 13 | Chưa đối chiếu báo cáo với testcase |
-| **Module 3** | Ghép Chuỗi & Kiểm tra Hợp lệ Dữ liệu | Thành viên 3 | 22 | Chưa đối chiếu báo cáo với testcase |
-| **Module 4** | Định dạng Kết quả, Điều khiển & Đa phiên bản | Thành viên 4 | 16 | Testcase mới: Not Run |
+| **Module 1** | Phép tính Số học Cơ bản & Kiểm thử Biên | Theo người phụ trách Build | 18 | Chưa chạy; đã suy luận từ mã nguồn |
+| **Module 2** | Phép Chia & Ngoại lệ Toán học | Theo người phụ trách Build | 13 | Chưa chạy; đã suy luận từ mã nguồn |
+| **Module 3** | Ghép Chuỗi & Kiểm tra Hợp lệ Dữ liệu | Theo người phụ trách Build | 22 | Chưa chạy; đã suy luận từ mã nguồn |
+| **Module 4** | Định dạng Kết quả, Điều khiển & Đa phiên bản | Theo người phụ trách Build | 16 | Chưa chạy; đã suy luận từ mã nguồn |
 
 ---
 
@@ -27,4 +27,4 @@ Ma trận Truy xuất Nguồn gốc Yêu cầu (RTM) đối với ứng dụng *
 | **FR-CALC-03** | Module 3 (Concatenate) | Ghép chuỗi văn bản và số; kiểm tra validation bắt lỗi nhập ký tự không phải số ("is not a number"). | `TC-CON-001`–`TC-CON-022` | Functional<br>Validation | Phân vùng tương đương (EP)<br>Negative Testing |
 | **FR-CALC-04** | Module 4 (Formatting & Builds) | Integers only, Clear, trạng thái Calculate và đối sánh Prototype với Build 1–9. | `TC-FMT-001`–`TC-FMT-007`<br>`TC-BLD-001`–`TC-BLD-009` | Functional<br>UI / State<br>Regression | State Transition<br>Bug Hunting Matrix |
 
-Các testcase Module 4 mới chỉ được thiết kế (`Not Run`); tỷ lệ bao phủ thực thi chỉ được cập nhật sau khi chạy và ghi bằng chứng. Báo cáo test run cũ chưa được sửa hoặc dùng làm kết quả thực thi cho các case mới.
+Ba file trong `tests/test-runs/` bao phủ đủ 621 cặp Test Case ID × Build. Nhãn suy luận từ mã nguồn gồm 357 Pass, 196 Fail và 68 Blocked; **chưa có lượt nào được thực thi**. Build 9 áp dụng quy ước: mọi case không Pass ghi Blocked. Các số liệu này không phải tỷ lệ bao phủ thực thi và không thay thế bằng chứng chạy test.
